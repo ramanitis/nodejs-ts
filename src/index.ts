@@ -5,7 +5,7 @@ import { config } from 'dotenv';
 config();
 const app = express();
 app.use(express.json());
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 app.get('/health', (_: Request, res: Response) => {
     res.json({ status: 'ok' });
